@@ -1,0 +1,86 @@
+<section id="hero" class="relative pt-20 pb-16 min-h-screen flex items-center overflow-hidden">
+    <!-- Background com gradiente -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-secondary-50"></div>
+
+    <!-- Fixed background pattern using CSS class instead of inline SVG -->
+    <div class="absolute inset-0 opacity-5 dot-pattern"></div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- Conteúdo Principal -->
+            <div class="text-center lg:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-500 mb-6 fade-in-up leading-tight">
+                    Transforme sua Carreira com
+                    <span class="text-secondary-500 block">Terapia Capilar</span>
+                </h1>
+
+                <p class="text-xl text-gray-600 mb-8 fade-in-up max-w-2xl leading-relaxed">
+                    Aprenda as técnicas mais avançadas de terapia capilar com a especialista Gleica Vilela e torne-se
+                    referência na área da beleza
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 fade-in-up">
+                    <button (click)="scrollToSection('courses')"
+                        class="gradient-secondary text-white px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 font-semibold text-lg shadow-hover">
+                        Ver Cursos Disponíveis
+                    </button>
+                    <button (click)="scrollToSection('about')"
+                        class="border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-full hover:bg-primary-500 hover:text-white transition-all duration-300 font-semibold text-lg">
+                        Conhecer Gleica
+                    </button>
+                </div>
+
+                <!-- Estatísticas -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in-up">
+                    <div *ngFor="let stat of stats" class="text-center">
+                        <div class="text-2xl md:text-3xl font-bold text-primary-500 mb-1">{{stat.number}}</div>
+                        <div class="text-sm text-gray-600 font-medium">{{stat.label}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagem Principal -->
+            <div class="relative fade-in-right">
+                <div class="relative">
+                    <!-- Círculo decorativo -->
+                    <div class="absolute -top-4 -right-4 w-72 h-72 bg-secondary-500/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-4 -left-4 w-64 h-64 bg-primary-500/10 rounded-full blur-2xl"></div>
+
+                    <!-- Imagem principal -->
+                    <div class="relative bg-white rounded-2xl shadow-elegant p-8">
+                        <img src="/assets/images/gleica-profile.png"
+                            alt="Gleica Vilela - Especialista em Terapia Capilar"
+                            class="w-full h-96 object-cover rounded-xl">
+
+                        <!-- Badge flutuante -->
+                        <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 slide-in">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 gradient-primary rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-primary-500">Certificação</div>
+                                    <div class="text-sm text-gray-600">Internacional</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <button (click)="scrollToSection('about')"
+            class="text-primary-500 hover:text-secondary-500 transition-colors duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </button>
+    </div>
+</section>

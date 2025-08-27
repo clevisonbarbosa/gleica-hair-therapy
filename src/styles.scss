@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #059669;
+    --secondary-color: #EAB308;
+    --background-color: #ffffff;
+    --text-color: #059669;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+// Animações customizadas
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.slide-in {
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+// Scroll suave para seções
+.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+// Gradientes personalizados
+.gradient-primary {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.gradient-secondary {
+    background: linear-gradient(135deg, #EAB308 0%, #CA8A04 100%);
+}
+
+// Sombras elegantes
+.shadow-elegant {
+    box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.1), 0 10px 10px -5px rgba(5, 150, 105, 0.04);
+}
+
+.shadow-hover {
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 20px 40px -10px rgba(5, 150, 105, 0.15), 0 10px 20px -5px rgba(5, 150, 105, 0.08);
+        transform: translateY(-2px);
+    }
+}

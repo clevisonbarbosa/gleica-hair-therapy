@@ -1,0 +1,33 @@
+.container {
+    max-width: 1200px;
+}
+
+.dot-pattern {
+    background-image: radial-gradient(circle, #164e63 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+// Animação personalizada para o scroll indicator
+@keyframes bounce {
+
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    40%,
+    43% {
+        transform: translate3d(-50%, -10px, 0);
+    }
+
+    70% {
+        transform: translate3d(-50%, -5px, 0);
+    }
+
+    90% {
+        transform: translate3d(-50%, -2px, 0);
+    }
+}
